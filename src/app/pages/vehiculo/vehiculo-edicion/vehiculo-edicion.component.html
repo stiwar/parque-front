@@ -1,0 +1,27 @@
+<mat-card>Ingrese los datos del vehículo</mat-card>
+
+<form class="example-container" [formGroup]="form" #frmVehiculo="ngForm" (ngSubmit)="operar()">
+
+    <div [hidden]="true">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="ID" required formControlName="id">
+      </mat-form-field>
+    </div>
+  
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Placa" required formControlName="placa">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Cilindraje" required formControlName="cilindraje">
+    </mat-form-field>
+  
+    <button mat-raised-button color="primary" type="submit" [disabled]="frmVehiculo.invalid">
+      <mat-icon>done</mat-icon>
+      <span>Aceptar</span>
+    </button>
+    <button mat-raised-button color="accent" routerLink='/vehiculos' type="button">
+      <mat-icon>close</mat-icon>
+      <span>Cancelar</span>
+    </button>
+  </form>
