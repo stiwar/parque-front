@@ -13,8 +13,18 @@
     </mat-form-field>
   
     <mat-form-field class="example-full-width">
-      <input matInput placeholder="Cilindraje" required formControlName="cilindraje">
+      <input matInput placeholder="Cilindraje" formControlName="cilindraje">
     </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Tipo de Vehículo</mat-label>
+      <mat-select [(value)]="tipoVehiculoSeleccionado" MatSelectModule="selectTipoVehiculo">
+        <mat-option value=1>Carro</mat-option>
+        <mat-option value=2>Moto</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <p>You selected: {{tipoVehiculoSeleccionado}}</p>
   
     <button mat-raised-button color="primary" type="submit" [disabled]="frmVehiculo.invalid">
       <mat-icon>done</mat-icon>

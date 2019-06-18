@@ -7,6 +7,7 @@
     <input matInput (keyup)="aplicarFiltro($event.target.value)" placeholder="Buscar Vehículo">
   </mat-form-field>
 </div>
+<h1>{{totalCobro}}</h1>
 
 <mat-table [dataSource]="dataSource" matSort>
   <ng-container matColumnDef="id">
@@ -19,6 +20,11 @@
     <mat-cell *matCellDef="let row"> {{row.placa}}</mat-cell>
   </ng-container>
 
+  <ng-container matColumnDef="tipo">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Tipo </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.tipoVehiculo.nombre}}</mat-cell>
+  </ng-container>
+
   <ng-container matColumnDef="cilindraje">
     <mat-header-cell *matHeaderCellDef mat-sort-header> Cilindraje </mat-header-cell>
     <mat-cell *matCellDef="let row"> {{row.cilindraje}} </mat-cell>
@@ -26,12 +32,12 @@
 
   <ng-container matColumnDef="fechaIngreso">
     <mat-header-cell *matHeaderCellDef mat-sort-header> Fecha Ingreso </mat-header-cell>
-    <mat-cell *matCellDef="let row"> {{row.fechaIngreso | date: format}} </mat-cell>
+    <mat-cell *matCellDef="let row"> {{row.fechaIngreso | date: "dd/MM/y h:mm:ss"}} </mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="fechaSalida">
     <mat-header-cell *matHeaderCellDef mat-sort-header> Fecha Salida </mat-header-cell>
-    <mat-cell *matCellDef="let row"> {{row.fechaSalida}} </mat-cell>
+    <mat-cell *matCellDef="let row"> {{row.fechaSalida  | date: "dd/MM/y h:mm:ss"}} </mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="estado">
@@ -42,8 +48,9 @@
   <ng-container matColumnDef="acciones">
     <mat-header-cell *matHeaderCellDef>Acciones</mat-header-cell>
     <mat-cell *matCellDef="let row">
-      <button mat-button color="primary" [routerLink]="['edicion', row.id]">Actualizar</button>
-      <button mat-button color="accent" (click)="eliminar(row.id)">Eliminar</button>
+      <!--<button mat-button color="primary" [routerLink]="['cobro', row.id]">Cobrar</button>-->
+      <button [disabled]="botonCobro" mat-button color="accent" (click)="generarCobro(row.id)">Cobrar</button>
+      <!--<button mat-button color="accent" (click)="eliminar(row.id)">Eliminar</button>-->
     </mat-cell>
   </ng-container>
   

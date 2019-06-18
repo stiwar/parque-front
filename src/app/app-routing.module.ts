@@ -6,7 +6,7 @@ import { VehiculoEdicionComponent } from './pages/vehiculo/vehiculo-edicion/vehi
 const routes: Routes = [
   {path:'vehiculos', component:VehiculoComponent, children:[
     {path:'nuevo', component:VehiculoEdicionComponent},
-    {path:'edicion/:id', component:VehiculoEdicionComponent}
+    {path:'cobro/:id', component:VehiculoEdicionComponent}
   ]}//localhost:4200/vehiculos/nuevo      localhost:4200/vehiculos/edicion/1
 ];
 
