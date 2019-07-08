@@ -1,0 +1,33 @@
+<mat-card>Ingrese los datos del vehículo</mat-card>
+
+<form class="example-container" [formGroup]="form" #frmVehiculo="ngForm" (ngSubmit)="registrar()">
+
+    <mat-form-field class="example-full-width">
+      <input required matInput placeholder="Placa" formControlName="placa">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Tipo de Vehículo</mat-label>
+      <mat-select required formControlName="tipoVehiculo" (selectionChange)="mostrarOcultarCilindraje()">
+        <mat-option value="1">Carro</mat-option>
+        <mat-option value="2">Moto</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Cilindraje" formControlName="cilindraje" [style.display]="isVisibility ? 'block' : 'none'">
+        <!--<input matInput placeholder="Cilindraje" formControlName="cilindraje" [class.activo]="isVisibility">-->
+        <!--<input matInput placeholder="Cilindraje" formControlName="cilindraje" [hidden]="form.controls.tipoVehiculo.value == '1'">-->
+    </mat-form-field>
+
+    <p>{{isVisibility}}</p>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="frmVehiculo.invalid">
+      <mat-icon>done</mat-icon>
+      <span>Aceptar</span>
+    </button>
+    <button mat-raised-button color="accent" routerLink='/vehiculos' type="button">
+      <mat-icon>close</mat-icon>
+      <span>Cancelar</span>
+    </button>
+  </form>
