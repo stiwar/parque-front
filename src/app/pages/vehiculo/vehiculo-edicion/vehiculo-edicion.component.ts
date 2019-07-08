@@ -52,10 +52,9 @@ export class VehiculoEdicionComponent implements OnInit {
       this.form.get('cilindraje').setValue('');
       this.isVisibility = false;
       //this.form.get('cilindraje').disable();
-    }else{
-      //this.form.get('cilindraje').enable();
+    }else
       this.isVisibility = true;
-    }
+      
   }
 
 }
