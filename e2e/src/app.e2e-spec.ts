@@ -1,10 +1,15 @@
 import { AppPage } from './app.po';
+<<<<<<< HEAD
 import { browser, logging, element, by } from 'protractor';
 import { ConstantesHtml } from './constanteshtml.e2e';
+=======
+import { browser, logging } from 'protractor';
+>>>>>>> 8df64a2b739be36a580cd22b8c8c33ba59437c96
 
 describe('workspace-project App', () => {
   let page: AppPage;
 
+<<<<<<< HEAD
   var select,
       option;
 
@@ -35,6 +40,12 @@ describe('workspace-project App', () => {
 
 
 /*
+=======
+  beforeEach(() => {
+    page = new AppPage();
+  });
+
+>>>>>>> 8df64a2b739be36a580cd22b8c8c33ba59437c96
   it('should display welcome message', () => {
     page.navigateTo();
     expect(page.getTitleText()).toEqual('Welcome to parque-front!');
@@ -46,5 +57,9 @@ describe('workspace-project App', () => {
     expect(logs).not.toContain(jasmine.objectContaining({
       level: logging.Level.SEVERE,
     } as logging.Entry));
+<<<<<<< HEAD
   });*/
+=======
+  });
+>>>>>>> 8df64a2b739be36a580cd22b8c8c33ba59437c96
 });

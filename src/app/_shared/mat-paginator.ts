@@ -2,7 +2,11 @@
 import { MatPaginatorIntl } from '@angular/material';
 
 export class MatPaginatorImpl extends MatPaginatorIntl {
+<<<<<<< HEAD
     itemsPerPageLabel = 'Elementos por página';
+=======
+    itemsPerPageLabel = 'Items por página';
+>>>>>>> 8df64a2b739be36a580cd22b8c8c33ba59437c96
     nextPageLabel = 'Siguiente';
     previousPageLabel = 'Atrás';
 

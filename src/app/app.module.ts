@@ -20,7 +20,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+<<<<<<< HEAD
     MaterialModule, //importacion de elementos de UI de Angular material
+=======
+    MaterialModule, //importacion de elementos de UI de Angulrar material
+>>>>>>> 8df64a2b739be36a580cd22b8c8c33ba59437c96
     HttpClientModule,
     ReactiveFormsModule
   ],
