@@ -31,11 +31,7 @@ import { MatButtonModule, MatToolbarModule, MatTableModule, MatPaginatorModule, 
     MatSelectModule
   ],
   providers: [
-<<<<<<< HEAD
     { provide: MatPaginatorIntl, useClass: MatPaginatorImpl}
-=======
-    { provide: MatPaginatorIntl, useClass: MatPaginatorIntl}
->>>>>>> 8df64a2b739be36a580cd22b8c8c33ba59437c96
   ]
 })
 export class MaterialModule { }

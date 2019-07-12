@@ -6,11 +6,7 @@ export const environment = {
   production: false,
   HOST_URL:'/servicio'
 };
-<<<<<<< HEAD
 //HOST_URL:'http://localhost:8080/servicio'
-=======
-//  //HOST_URL:'http://localhost:8080/servicio'
->>>>>>> 8df64a2b739be36a580cd22b8c8c33ba59437c96
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
